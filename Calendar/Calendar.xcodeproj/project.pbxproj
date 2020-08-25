@@ -37,6 +37,8 @@
 		13C7D5C124F50C6D00FB1992 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C024F50C6D00FB1992 /* DayViewModel.swift */; };
 		13C7D5C324F50C8000FB1992 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C224F50C8000FB1992 /* CalendarViewModel.swift */; };
 		13C7D5C524F54C7E00FB1992 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C424F54C7E00FB1992 /* BaseCell.swift */; };
+		13C7D5C724F54E1B00FB1992 /* CollectionView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C624F54E1B00FB1992 /* CollectionView+RegisterCell.swift */; };
+		13C7D5C924F54E3D00FB1992 /* CollectionView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C824F54E3D00FB1992 /* CollectionView+DequeueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		13C7D5C024F50C6D00FB1992 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		13C7D5C224F50C8000FB1992 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		13C7D5C424F54C7E00FB1992 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		13C7D5C624F54E1B00FB1992 /* CollectionView+RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+RegisterCell.swift"; sourceTree = "<group>"; };
+		13C7D5C824F54E3D00FB1992 /* CollectionView+DequeueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+DequeueCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 				130831FC24F4E3C20082D003 /* UIStackView+Init.swift */,
 				130831FE24F4E3C20082D003 /* UIView+Constraints.swift */,
 				130831FD24F4E3C20082D003 /* UIView+Radius.swift */,
+				13C7D5C624F54E1B00FB1992 /* CollectionView+RegisterCell.swift */,
+				13C7D5C824F54E3D00FB1992 /* CollectionView+DequeueCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C7D5C924F54E3D00FB1992 /* CollectionView+DequeueCell.swift in Sources */,
 				1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */,
 				13C7D5BE24F50BD600FB1992 /* DayViewCell.swift in Sources */,
 				1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */,
@@ -410,6 +417,7 @@
 				1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */,
 				13C7D5C124F50C6D00FB1992 /* DayViewModel.swift in Sources */,
 				1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */,
+				13C7D5C724F54E1B00FB1992 /* CollectionView+RegisterCell.swift in Sources */,
 				1308320A24F4E4360082D003 /* CapsuleBottomBorderStyle.swift in Sources */,
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
 				13C7D5AD24F4EFCC00FB1992 /* DatePropertyProvider.swift in Sources */,
