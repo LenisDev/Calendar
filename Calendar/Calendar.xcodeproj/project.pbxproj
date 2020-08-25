@@ -213,8 +213,7 @@
 		13C7D5AA24F4EFB000FB1992 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */,
-				13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */,
+				13C7D5B424F4F08C00FB1992 /* Implementations */,
 				13C7D5AF24F4F04700FB1992 /* Providers */,
 			);
 			path = Date;
@@ -227,6 +226,15 @@
 				13C7D5AB24F4EFCC00FB1992 /* DatePropertyProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		13C7D5B424F4F08C00FB1992 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */,
+				13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
