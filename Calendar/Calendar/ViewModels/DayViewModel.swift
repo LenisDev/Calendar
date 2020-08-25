@@ -10,4 +10,6 @@ import Foundation
 
 struct DayViewModel: BaseViewModel {
     var id: String
+
+    let date: Date
 }

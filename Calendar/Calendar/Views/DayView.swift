@@ -11,4 +11,19 @@ import UIKit
 
 class DayView: BaseView<DayViewModel> {
 
+    private(set) lazy var dayLbl = UILabel()
+
+    override func setupViews() {
+        super.setupViews()
+
+        self.dayLbl.textAlignment = .center
+        self.dayLbl.center(to: rootView)
+    }
+
+    override func setupData() {
+        super.setupData()
+
+        self.dayLbl.text = data.date.day.description
+    }
+
 }
