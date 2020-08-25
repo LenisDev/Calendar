@@ -11,7 +11,23 @@
 		130831BE24F4DEE30082D003 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831BD24F4DEE30082D003 /* RootViewController.swift */; };
 		130831C324F4DEE40082D003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130831C224F4DEE40082D003 /* Assets.xcassets */; };
 		130831C624F4DEE40082D003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130831C424F4DEE40082D003 /* LaunchScreen.storyboard */; };
+		13C7D5CC24F5507C00FB1992 /* Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C7D5CB24F5507C00FB1992 /* Calendar.framework */; };
+		13C7D5CD24F5507C00FB1992 /* Calendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13C7D5CB24F5507C00FB1992 /* Calendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		13C7D5CE24F5507C00FB1992 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				13C7D5CD24F5507C00FB1992 /* Calendar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		130831B624F4DEE30082D003 /* CalendarExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +36,7 @@
 		130831C224F4DEE40082D003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		130831C524F4DEE40082D003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		130831C724F4DEE40082D003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13C7D5CB24F5507C00FB1992 /* Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C7D5CC24F5507C00FB1992 /* Calendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 			children = (
 				130831B824F4DEE30082D003 /* CalendarExamples */,
 				130831B724F4DEE30082D003 /* Products */,
+				13C7D5CA24F5507C00FB1992 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +88,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		13C7D5CA24F5507C00FB1992 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5CB24F5507C00FB1992 /* Calendar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,6 +106,7 @@
 				130831B224F4DEE30082D003 /* Sources */,
 				130831B324F4DEE30082D003 /* Frameworks */,
 				130831B424F4DEE30082D003 /* Resources */,
+				13C7D5CE24F5507C00FB1992 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

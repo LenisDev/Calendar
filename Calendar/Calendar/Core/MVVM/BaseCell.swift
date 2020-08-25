@@ -21,7 +21,7 @@ import UIKit
 ///  - `rootView` should be considered as top view and all subview
 ///     at top level (hierarchy) should be added to `rootView`
 ///
-public class BaseCell<DATA: BaseViewModel>: UITableViewCell, DesignableView {
+public class BaseCell<DATA: BaseViewModel>: UICollectionViewCell, DesignableView {
 
     // MARK: - Properties
 
@@ -30,7 +30,7 @@ public class BaseCell<DATA: BaseViewModel>: UITableViewCell, DesignableView {
     /// # Important
     /// - Everytime data is set, view will reset
     ///
-    var data: DATA {
+    var data: DATA? {
         didSet {
             self.initialize()
         }
@@ -40,10 +40,8 @@ public class BaseCell<DATA: BaseViewModel>: UITableViewCell, DesignableView {
     private(set) var rootView = UIView()
 
     // MARK: - Inits
-    public init(data: DATA) {
-        self.data = data
-
-        super.init(style: .default, reuseIdentifier: nil)
+    public override init(frame: CGRect = .zero) {
+        super.init(frame: frame)
 
         self.initialize()
     }

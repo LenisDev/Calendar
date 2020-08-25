@@ -10,4 +10,6 @@ import Foundation
 
 public struct CalendarViewModel: BaseViewModel {
     public var id = UUID()
+
+    public init() {}
 }

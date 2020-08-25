@@ -23,7 +23,7 @@ class DayViewCell: BaseCell<DayViewModel> {
     override func setupData() {
         super.setupData()
 
-        self.dayLbl.text = data.date.day.description
+        self.dayLbl.text = data?.date.day.description
     }
 
     override func tintColor(_ color: UIColor) -> Self {
