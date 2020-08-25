@@ -10,6 +10,12 @@
 		1308319D24F4DE810082D003 /* Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1308319324F4DE810082D003 /* Calendar.framework */; };
 		130831A224F4DE810082D003 /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831A124F4DE810082D003 /* CalendarTests.swift */; };
 		130831A424F4DE820082D003 /* Calendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1308319624F4DE810082D003 /* Calendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		130831EC24F4E1780082D003 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831EB24F4E1780082D003 /* BaseView.swift */; };
+		130831EE24F4E1980082D003 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831ED24F4E1980082D003 /* BaseViewModel.swift */; };
+		130831F024F4E1AD0082D003 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831EF24F4E1AD0082D003 /* Border.swift */; };
+		130831F224F4E1C20082D003 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F124F4E1C20082D003 /* DesignableView.swift */; };
+		130831F424F4E1DA0082D003 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F324F4E1DA0082D003 /* Radius.swift */; };
+		130831F624F4E1ED0082D003 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F524F4E1ED0082D003 /* Stylable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		1308319C24F4DE810082D003 /* CalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		130831A124F4DE810082D003 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
 		130831A324F4DE820082D003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		130831EB24F4E1780082D003 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		130831ED24F4E1980082D003 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		130831EF24F4E1AD0082D003 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		130831F124F4E1C20082D003 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		130831F324F4E1DA0082D003 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
+		130831F524F4E1ED0082D003 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +83,8 @@
 		1308319524F4DE810082D003 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				1308319624F4DE810082D003 /* Calendar.h */,
-				1308319724F4DE810082D003 /* Info.plist */,
+				130831EA24F4E1650082D003 /* Core */,
+				130831D524F4E0E30082D003 /* Supporting Files */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -84,6 +96,44 @@
 				130831A324F4DE820082D003 /* Info.plist */,
 			);
 			path = CalendarTests;
+			sourceTree = "<group>";
+		};
+		130831D524F4E0E30082D003 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1308319624F4DE810082D003 /* Calendar.h */,
+				1308319724F4DE810082D003 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		130831EA24F4E1650082D003 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				130831F824F4E2440082D003 /* Design */,
+				130831F724F4E1FE0082D003 /* MVVM */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		130831F724F4E1FE0082D003 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				130831EB24F4E1780082D003 /* BaseView.swift */,
+				130831ED24F4E1980082D003 /* BaseViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		130831F824F4E2440082D003 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				130831EF24F4E1AD0082D003 /* Border.swift */,
+				130831F324F4E1DA0082D003 /* Radius.swift */,
+				130831F124F4E1C20082D003 /* DesignableView.swift */,
+				130831F524F4E1ED0082D003 /* Stylable.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +198,7 @@
 				TargetAttributes = {
 					1308319224F4DE810082D003 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					1308319B24F4DE810082D003 = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130831F224F4E1C20082D003 /* DesignableView.swift in Sources */,
+				130831EC24F4E1780082D003 /* BaseView.swift in Sources */,
+				130831F424F4E1DA0082D003 /* Radius.swift in Sources */,
+				130831F624F4E1ED0082D003 /* Stylable.swift in Sources */,
+				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
+				130831EE24F4E1980082D003 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +397,7 @@
 		130831A824F4DE820082D003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.manishpandey-git.Calendar";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +422,7 @@
 		130831A924F4DE820082D003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +446,7 @@
 		130831AB24F4DE820082D003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CalendarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +464,7 @@
 		130831AC24F4DE820082D003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CalendarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
