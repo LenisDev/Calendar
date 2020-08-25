@@ -9,15 +9,22 @@
 import Foundation
 import UIKit
 
+public protocol DayViewDelegate: class {
+    func didSelectDay(_ day: DayViewModel)
+}
+
 class DayViewCell: BaseCell<DayViewModel> {
 
     private(set) lazy var dayLbl = UILabel()
+    public weak var delegate: DayViewDelegate?
 
     override func setupViews() {
         super.setupViews()
 
         self.dayLbl.textAlignment = .center
         self.dayLbl.center(to: rootView)
+
+        self.rootView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTapGesture)))
     }
 
     override func setupData() {
@@ -32,6 +39,14 @@ class DayViewCell: BaseCell<DayViewModel> {
         self.dayLbl.textColor = color
 
         return self
+    }
+
+}
+
+extension DayViewCell {
+
+    @objc private func onTapGesture() {
+        self.delegate?.didSelectDay(data!)
     }
 
 }

@@ -23,6 +23,19 @@ public class CalendarView: BaseView<CalendarViewModel> {
         }
     }
 
+    private(set) var onDaySelected: (DayViewModel) -> Void
+
+    public init(data: CalendarViewModel,
+                onDaySelected: @escaping (DayViewModel) -> Void) {
+        self.onDaySelected = onDaySelected
+
+        super.init(data: data)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func setupViews() {
         super.setupViews()
 
@@ -43,7 +56,7 @@ public class CalendarView: BaseView<CalendarViewModel> {
 
 }
 
-extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource, DayViewDelegate {
 
     private func setupCollectionViewLayout() {
         self.collectionViewLayout.scrollDirection = self.state == .collapsed ? .horizontal : .vertical
@@ -59,6 +72,7 @@ extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(DayViewCell.self, for: indexPath)
         cell.data = data.items[indexPath.row]
+        cell.delegate = self
 
         if cell.data?.state.rawValue == DayState.selected.rawValue {
             cell.style(itemSelectedStyle)
@@ -67,6 +81,10 @@ extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
         }
 
         return cell
+    }
+
+    public func didSelectDay(_ day: DayViewModel) {
+        self.onDaySelected(day)
     }
 
 }
@@ -104,12 +122,14 @@ public extension CalendarView {
 
 public extension CalendarView {
 
+    @discardableResult
     func loadDatesFor(month: Date, selectDay: Int) -> Self {
         self.data.loadDatesFor(month: month, selectDay: selectDay)
 
         return self
     }
 
+    @discardableResult
     func state(_ state: CalendarViewState) -> Self {
         self.state = state
 

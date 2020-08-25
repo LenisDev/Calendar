@@ -13,8 +13,8 @@ public enum DayState: Int {
     case unSelected
 }
 
-struct DayViewModel: BaseViewModel {
-    var id: String
+public struct DayViewModel: BaseViewModel {
+    public var id: String
 
     let date: Date
     var state: DayState = .unSelected
