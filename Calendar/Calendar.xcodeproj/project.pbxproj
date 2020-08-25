@@ -27,6 +27,10 @@
 		1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */; };
 		1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320D24F4E46A0082D003 /* RectBorderStyle.swift */; };
 		1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */; };
+		13C7D5AD24F4EFCC00FB1992 /* DatePropertyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5AB24F4EFCC00FB1992 /* DatePropertyProvider.swift */; };
+		13C7D5AE24F4EFCC00FB1992 /* CalendarDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5AC24F4EFCC00FB1992 /* CalendarDateProvider.swift */; };
+		13C7D5B224F4F05F00FB1992 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */; };
+		13C7D5B324F4F05F00FB1992 /* Date+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBottomBorderStyle.swift; sourceTree = "<group>"; };
 		1308320D24F4E46A0082D003 /* RectBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBorderStyle.swift; sourceTree = "<group>"; };
 		1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleBorderStyle.swift; sourceTree = "<group>"; };
+		13C7D5AB24F4EFCC00FB1992 /* DatePropertyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePropertyProvider.swift; sourceTree = "<group>"; };
+		13C7D5AC24F4EFCC00FB1992 /* CalendarDateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDateProvider.swift; sourceTree = "<group>"; };
+		13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
+		13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Properties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		1308319524F4DE810082D003 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				13C7D5AA24F4EFB000FB1992 /* Date */,
 				1308320424F4E4270082D003 /* Styles */,
 				130831F924F4E2DD0082D003 /* Extensions */,
 				130831EA24F4E1650082D003 /* Core */,
@@ -199,6 +208,25 @@
 				1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */,
 			);
 			path = Rect;
+			sourceTree = "<group>";
+		};
+		13C7D5AA24F4EFB000FB1992 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */,
+				13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */,
+				13C7D5AF24F4F04700FB1992 /* Providers */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		13C7D5AF24F4F04700FB1992 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5AC24F4EFCC00FB1992 /* CalendarDateProvider.swift */,
+				13C7D5AB24F4EFCC00FB1992 /* DatePropertyProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,12 +348,16 @@
 				1308320824F4E4360082D003 /* CapsuleShapeStyle.swift in Sources */,
 				1308320924F4E4360082D003 /* RectShapeStyle.swift in Sources */,
 				130831FF24F4E3C20082D003 /* CALayer+Border.swift in Sources */,
+				13C7D5AE24F4EFCC00FB1992 /* CalendarDateProvider.swift in Sources */,
+				13C7D5B324F4F05F00FB1992 /* Date+Properties.swift in Sources */,
 				130831F624F4E1ED0082D003 /* Stylable.swift in Sources */,
 				1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */,
 				1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */,
 				1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */,
 				1308320A24F4E4360082D003 /* CapsuleBottomBorderStyle.swift in Sources */,
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
+				13C7D5AD24F4EFCC00FB1992 /* DatePropertyProvider.swift in Sources */,
+				13C7D5B224F4F05F00FB1992 /* CalendarDate.swift in Sources */,
 				1308320324F4E3C20082D003 /* UIView+Constraints.swift in Sources */,
 				130831EE24F4E1980082D003 /* BaseViewModel.swift in Sources */,
 			);
