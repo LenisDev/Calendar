@@ -26,4 +26,12 @@ class DayView: BaseView<DayViewModel> {
         self.dayLbl.text = data.date.day.description
     }
 
+    override func tintColor(_ color: UIColor) -> Self {
+        super.tintColor(color)
+
+        self.dayLbl.textColor = color
+
+        return self
+    }
+
 }
