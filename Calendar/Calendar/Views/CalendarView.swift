@@ -37,6 +37,7 @@ public class CalendarView: BaseView<CalendarViewModel> {
 }
 
 extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
+
     public func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
         return self.data.items.count
@@ -55,9 +56,6 @@ extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
 
         return cell
     }
-
-
-
 
 }
 
@@ -88,6 +86,14 @@ public extension CalendarView {
         calendarCV.reloadData()
 
         return self
+    }
+
+}
+
+public extension CalendarView {
+
+    func loadDatesFor(month: Date, selectDay: Int) {
+        self.data.loadDatesFor(month: month, selectDay: selectDay)
     }
 
 }
