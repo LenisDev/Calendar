@@ -8,6 +8,11 @@
 
 import Foundation
 
+public enum CalendarViewState {
+    case expanded
+    case collapsed
+}
+
 public struct CalendarViewModel: BaseViewModel {
     public var id = UUID()
 

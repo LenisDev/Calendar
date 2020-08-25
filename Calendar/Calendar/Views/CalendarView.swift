@@ -17,10 +17,17 @@ public class CalendarView: BaseView<CalendarViewModel> {
     private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
     private(set) var itemSelectedStyle: Stylable = CapsuleBorderStyle()
 
+    private(set) var state = CalendarViewState.expanded {
+        didSet {
+            self.setupCollectionViewLayout()
+        }
+    }
+
     override func setupViews() {
         super.setupViews()
 
-        calendarCV.sameSize(as: self.rootView)
+        self.setupCollectionViewLayout()
+        self.calendarCV.sameSize(as: self.rootView)
 
         self.calendarCV.dataSource = self
         self.calendarCV.delegate = self
@@ -37,6 +44,11 @@ public class CalendarView: BaseView<CalendarViewModel> {
 }
 
 extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    private func setupCollectionViewLayout() {
+        self.collectionViewLayout.scrollDirection = self.state == .collapsed ? .horizontal : .vertical
+        self.calendarCV.isPagingEnabled = true
+    }
 
     public func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
@@ -92,8 +104,16 @@ public extension CalendarView {
 
 public extension CalendarView {
 
-    func loadDatesFor(month: Date, selectDay: Int) {
+    func loadDatesFor(month: Date, selectDay: Int) -> Self {
         self.data.loadDatesFor(month: month, selectDay: selectDay)
+
+        return self
+    }
+
+    func state(_ state: CalendarViewState) -> Self {
+        self.state = state
+
+        return self
     }
 
 }
