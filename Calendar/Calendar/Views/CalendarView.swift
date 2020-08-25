@@ -14,6 +14,9 @@ public class CalendarView: BaseView<CalendarViewModel> {
     private(set) lazy var collectionViewLayout = UICollectionViewFlowLayout()
     private(set) lazy var calendarCV = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
 
+    private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
+    private(set) var itemSelectedStyle: Stylable = CapsuleBorderStyle()
+
     override func setupViews() {
         super.setupViews()
 
@@ -44,10 +47,47 @@ extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeue(DayViewCell.self, for: indexPath)
         cell.data = DayViewModel(id: UUID().description, date: Date())
 
+        if cell.data?.state.rawValue == DayState.selected.rawValue {
+            cell.style(itemSelectedStyle)
+        } else {
+            cell.style(itemUnselectedStyle)
+        }
+
         return cell
     }
 
 
 
+
+}
+
+// MARK: - Style
+public extension CalendarView {
+
+    /// Style applied when item's state is unselected
+    /// - Parameter style: style for view
+    /// - Returns: `TabBarView`
+    @discardableResult
+    func itemUnselectedStyle(_ style: Stylable) -> Self {
+
+        self.itemUnselectedStyle = style
+
+        calendarCV.reloadData()
+
+        return self
+    }
+
+    /// Style applied when item's state is selected
+    /// - Parameter style: style for view
+    /// - Returns: `TabBarView`
+    @discardableResult
+    func itemSelectedStyle(_ style: Stylable) -> Self {
+
+        self.itemSelectedStyle = style
+
+        calendarCV.reloadData()
+
+        return self
+    }
 
 }

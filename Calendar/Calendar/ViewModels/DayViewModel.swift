@@ -8,8 +8,14 @@
 
 import Foundation
 
+public enum DayState: Int {
+    case selected = 0
+    case unSelected
+}
+
 struct DayViewModel: BaseViewModel {
     var id: String
 
     let date: Date
+    var state: DayState = .unSelected
 }

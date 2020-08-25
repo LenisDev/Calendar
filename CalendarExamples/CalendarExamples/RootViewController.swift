@@ -16,9 +16,12 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = .white
+
         calendarView
             .with(width: 350, height: 60)
             .center(to: view)
+            .style(RectShapeStyle())
         
     }
 
