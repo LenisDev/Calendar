@@ -1,5 +1,5 @@
 //
-//  DayView.swift
+//  DayViewCell.swift
 //  Calendar
 //
 //  Created by Manish on 25/08/20.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DayView: BaseView<DayViewModel> {
+class DayViewCell: BaseCell<DayViewModel> {
 
     private(set) lazy var dayLbl = UILabel()
 

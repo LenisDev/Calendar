@@ -16,11 +16,29 @@ public class CalendarView: BaseView<CalendarViewModel> {
     override func setupViews() {
         super.setupViews()
 
+        self.calendarCV.dataSource = self
+        self.calendarCV.delegate = self
     }
 
     override func setupData() {
         super.setupData()
 
     }
+
+}
+
+extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
+    public func collectionView(_ collectionView: UICollectionView,
+                               numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+
+
+
 
 }
