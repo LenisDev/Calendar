@@ -16,6 +16,11 @@
 		130831F224F4E1C20082D003 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F124F4E1C20082D003 /* DesignableView.swift */; };
 		130831F424F4E1DA0082D003 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F324F4E1DA0082D003 /* Radius.swift */; };
 		130831F624F4E1ED0082D003 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831F524F4E1ED0082D003 /* Stylable.swift */; };
+		130831FF24F4E3C20082D003 /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FA24F4E3C20082D003 /* CALayer+Border.swift */; };
+		1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FB24F4E3C20082D003 /* Number+UIEdgeInset.swift */; };
+		1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FC24F4E3C20082D003 /* UIStackView+Init.swift */; };
+		1308320224F4E3C20082D003 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FD24F4E3C20082D003 /* UIView+Radius.swift */; };
+		1308320324F4E3C20082D003 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FE24F4E3C20082D003 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		130831F124F4E1C20082D003 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		130831F324F4E1DA0082D003 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		130831F524F4E1ED0082D003 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		130831FA24F4E3C20082D003 /* CALayer+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
+		130831FB24F4E3C20082D003 /* Number+UIEdgeInset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+UIEdgeInset.swift"; sourceTree = "<group>"; };
+		130831FC24F4E3C20082D003 /* UIStackView+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
+		130831FD24F4E3C20082D003 /* UIView+Radius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
+		130831FE24F4E3C20082D003 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 		1308319524F4DE810082D003 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				130831F924F4E2DD0082D003 /* Extensions */,
 				130831EA24F4E1650082D003 /* Core */,
 				130831D524F4E0E30082D003 /* Supporting Files */,
 			);
@@ -134,6 +145,18 @@
 				130831F524F4E1ED0082D003 /* Stylable.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		130831F924F4E2DD0082D003 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				130831FA24F4E3C20082D003 /* CALayer+Border.swift */,
+				130831FB24F4E3C20082D003 /* Number+UIEdgeInset.swift */,
+				130831FC24F4E3C20082D003 /* UIStackView+Init.swift */,
+				130831FE24F4E3C20082D003 /* UIView+Constraints.swift */,
+				130831FD24F4E3C20082D003 /* UIView+Radius.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,11 +269,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */,
 				130831F224F4E1C20082D003 /* DesignableView.swift in Sources */,
 				130831EC24F4E1780082D003 /* BaseView.swift in Sources */,
 				130831F424F4E1DA0082D003 /* Radius.swift in Sources */,
+				1308320224F4E3C20082D003 /* UIView+Radius.swift in Sources */,
+				130831FF24F4E3C20082D003 /* CALayer+Border.swift in Sources */,
 				130831F624F4E1ED0082D003 /* Stylable.swift in Sources */,
+				1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */,
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
+				1308320324F4E3C20082D003 /* UIView+Constraints.swift in Sources */,
 				130831EE24F4E1980082D003 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
