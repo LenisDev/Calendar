@@ -39,13 +39,13 @@ public class CalendarView: BaseView<CalendarViewModel> {
 extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.data.items.count
     }
 
     public func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(DayViewCell.self, for: indexPath)
-        cell.data = DayViewModel(id: UUID().description, date: Date())
+        cell.data = data.items[indexPath.row]
 
         if cell.data?.state.rawValue == DayState.selected.rawValue {
             cell.style(itemSelectedStyle)
