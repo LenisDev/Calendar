@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TabBar
 
 struct CapsuleBorderStyle: Stylable {
 
@@ -17,7 +16,7 @@ struct CapsuleBorderStyle: Stylable {
 
     var border: Border { Border(color: .red, width: 2, edges: [.all]) }
 
-    var radius: Radius { Radius(size: tabBarRadius, corners: [.allCorners]) }
+    var radius: Radius { Radius(size: 25, corners: [.allCorners]) }
 
     public init() { }
     

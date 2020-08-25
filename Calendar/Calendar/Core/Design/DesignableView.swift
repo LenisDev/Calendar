@@ -6,6 +6,8 @@
 //  Copyright © 2020 Manish. All rights reserved.
 //
 
+import UIKit
+
 /// Provides design related functional methods
 public protocol DesignableView: UIView {
 
