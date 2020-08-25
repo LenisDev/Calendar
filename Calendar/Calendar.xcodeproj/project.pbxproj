@@ -32,6 +32,10 @@
 		13C7D5B224F4F05F00FB1992 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */; };
 		13C7D5B324F4F05F00FB1992 /* Date+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */; };
 		13C7D5B724F4F0FD00FB1992 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5B624F4F0FD00FB1992 /* String+Date.swift */; };
+		13C7D5BC24F50B3000FB1992 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5BB24F50B3000FB1992 /* CalendarView.swift */; };
+		13C7D5BE24F50BD600FB1992 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5BD24F50BD600FB1992 /* DayView.swift */; };
+		13C7D5C124F50C6D00FB1992 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C024F50C6D00FB1992 /* DayViewModel.swift */; };
+		13C7D5C324F50C8000FB1992 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D5C224F50C8000FB1992 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		13C7D5B024F4F05F00FB1992 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		13C7D5B124F4F05F00FB1992 /* Date+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Properties.swift"; sourceTree = "<group>"; };
 		13C7D5B624F4F0FD00FB1992 /* String+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		13C7D5BB24F50B3000FB1992 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		13C7D5BD24F50BD600FB1992 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		13C7D5C024F50C6D00FB1992 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		13C7D5C224F50C8000FB1992 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,8 @@
 		1308319524F4DE810082D003 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				13C7D5AA24F4EFB000FB1992 /* Date */,
-				1308320424F4E4270082D003 /* Styles */,
-				130831F924F4E2DD0082D003 /* Extensions */,
+				13C7D5BF24F50C5F00FB1992 /* ViewModels */,
+				13C7D5BA24F50B1600FB1992 /* Views */,
 				130831EA24F4E1650082D003 /* Core */,
 				130831D524F4E0E30082D003 /* Supporting Files */,
 			);
@@ -145,6 +152,9 @@
 		130831EA24F4E1650082D003 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				13C7D5AA24F4EFB000FB1992 /* Date */,
+				1308320424F4E4270082D003 /* Styles */,
+				130831F924F4E2DD0082D003 /* Extensions */,
 				130831F824F4E2440082D003 /* Design */,
 				130831F724F4E1FE0082D003 /* MVVM */,
 			);
@@ -246,6 +256,24 @@
 				13C7D5B624F4F0FD00FB1992 /* String+Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13C7D5BA24F50B1600FB1992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5BB24F50B3000FB1992 /* CalendarView.swift */,
+				13C7D5BD24F50BD600FB1992 /* DayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13C7D5BF24F50C5F00FB1992 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				13C7D5C024F50C6D00FB1992 /* DayViewModel.swift */,
+				13C7D5C224F50C8000FB1992 /* CalendarViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +387,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */,
+				13C7D5BE24F50BD600FB1992 /* DayView.swift in Sources */,
 				1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */,
+				13C7D5BC24F50B3000FB1992 /* CalendarView.swift in Sources */,
 				130831F224F4E1C20082D003 /* DesignableView.swift in Sources */,
 				130831EC24F4E1780082D003 /* BaseView.swift in Sources */,
 				130831F424F4E1DA0082D003 /* Radius.swift in Sources */,
@@ -372,7 +402,9 @@
 				13C7D5B324F4F05F00FB1992 /* Date+Properties.swift in Sources */,
 				130831F624F4E1ED0082D003 /* Stylable.swift in Sources */,
 				1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */,
+				13C7D5C324F50C8000FB1992 /* CalendarViewModel.swift in Sources */,
 				1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */,
+				13C7D5C124F50C6D00FB1992 /* DayViewModel.swift in Sources */,
 				1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */,
 				1308320A24F4E4360082D003 /* CapsuleBottomBorderStyle.swift in Sources */,
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
