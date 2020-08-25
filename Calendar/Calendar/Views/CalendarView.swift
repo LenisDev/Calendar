@@ -85,6 +85,10 @@ extension CalendarView: UICollectionViewDelegate, UICollectionViewDataSource, Da
 
     public func didSelectDay(_ day: DayViewModel) {
         self.onDaySelected(day)
+
+        self.data.changeDateSelection(to: day.date)
+
+        self.calendarCV.reloadData()
     }
 
 }

@@ -11,7 +11,9 @@ import Calendar
 
 class RootViewController: UIViewController {
 
-    let calendarView = CalendarView(data: CalendarViewModel())
+    let calendarView = CalendarView(data: CalendarViewModel()) { selectedDay in
+        print(selectedDay)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +21,10 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = .white
 
         calendarView
-            .with(width: 350, height: 300)
+            .with(width: 350, height: 350)
             .center(to: view)
             .style(RectShapeStyle())
+            .state(.expanded)
         
     }
 
