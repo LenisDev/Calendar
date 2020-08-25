@@ -21,6 +21,12 @@
 		1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FC24F4E3C20082D003 /* UIStackView+Init.swift */; };
 		1308320224F4E3C20082D003 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FD24F4E3C20082D003 /* UIView+Radius.swift */; };
 		1308320324F4E3C20082D003 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831FE24F4E3C20082D003 /* UIView+Constraints.swift */; };
+		1308320824F4E4360082D003 /* CapsuleShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320524F4E4360082D003 /* CapsuleShapeStyle.swift */; };
+		1308320924F4E4360082D003 /* RectShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320624F4E4360082D003 /* RectShapeStyle.swift */; };
+		1308320A24F4E4360082D003 /* CapsuleBottomBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320724F4E4360082D003 /* CapsuleBottomBorderStyle.swift */; };
+		1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */; };
+		1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320D24F4E46A0082D003 /* RectBorderStyle.swift */; };
+		1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		130831FC24F4E3C20082D003 /* UIStackView+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
 		130831FD24F4E3C20082D003 /* UIView+Radius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		130831FE24F4E3C20082D003 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		1308320524F4E4360082D003 /* CapsuleShapeStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleShapeStyle.swift; sourceTree = "<group>"; };
+		1308320624F4E4360082D003 /* RectShapeStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectShapeStyle.swift; sourceTree = "<group>"; };
+		1308320724F4E4360082D003 /* CapsuleBottomBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleBottomBorderStyle.swift; sourceTree = "<group>"; };
+		1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBottomBorderStyle.swift; sourceTree = "<group>"; };
+		1308320D24F4E46A0082D003 /* RectBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBorderStyle.swift; sourceTree = "<group>"; };
+		1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleBorderStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,7 @@
 		1308319524F4DE810082D003 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				1308320424F4E4270082D003 /* Styles */,
 				130831F924F4E2DD0082D003 /* Extensions */,
 				130831EA24F4E1650082D003 /* Core */,
 				130831D524F4E0E30082D003 /* Supporting Files */,
@@ -157,6 +170,35 @@
 				130831FD24F4E3C20082D003 /* UIView+Radius.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1308320424F4E4270082D003 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1308321324F4E4B40082D003 /* Capsule */,
+				1308321424F4E4DE0082D003 /* Rect */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1308321324F4E4B40082D003 /* Capsule */ = {
+			isa = PBXGroup;
+			children = (
+				1308320524F4E4360082D003 /* CapsuleShapeStyle.swift */,
+				1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */,
+				1308320724F4E4360082D003 /* CapsuleBottomBorderStyle.swift */,
+			);
+			path = Capsule;
+			sourceTree = "<group>";
+		};
+		1308321424F4E4DE0082D003 /* Rect */ = {
+			isa = PBXGroup;
+			children = (
+				1308320624F4E4360082D003 /* RectShapeStyle.swift */,
+				1308320D24F4E46A0082D003 /* RectBorderStyle.swift */,
+				1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */,
+			);
+			path = Rect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,13 +312,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1308320124F4E3C20082D003 /* UIStackView+Init.swift in Sources */,
+				1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */,
 				130831F224F4E1C20082D003 /* DesignableView.swift in Sources */,
 				130831EC24F4E1780082D003 /* BaseView.swift in Sources */,
 				130831F424F4E1DA0082D003 /* Radius.swift in Sources */,
 				1308320224F4E3C20082D003 /* UIView+Radius.swift in Sources */,
+				1308320824F4E4360082D003 /* CapsuleShapeStyle.swift in Sources */,
+				1308320924F4E4360082D003 /* RectShapeStyle.swift in Sources */,
 				130831FF24F4E3C20082D003 /* CALayer+Border.swift in Sources */,
 				130831F624F4E1ED0082D003 /* Stylable.swift in Sources */,
+				1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */,
+				1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */,
 				1308320024F4E3C20082D003 /* Number+UIEdgeInset.swift in Sources */,
+				1308320A24F4E4360082D003 /* CapsuleBottomBorderStyle.swift in Sources */,
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
 				1308320324F4E3C20082D003 /* UIView+Constraints.swift in Sources */,
 				130831EE24F4E1980082D003 /* BaseViewModel.swift in Sources */,
