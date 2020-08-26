@@ -1,6 +1,8 @@
 ![Project Logo](./Logo.png)
 Easy to use functional calendar for iOS projects.
 
+![CI Tests](https://github.com/LenisDev/Calendar/workflows/GHActionCI/badge.svg)
+
 ### Usage
 ```swift
 
