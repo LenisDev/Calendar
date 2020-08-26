@@ -8,15 +8,15 @@
 
 import UIKit
 
-struct RectBottomBorderStyle: Stylable {
+public struct RectBottomBorderStyle: Stylable {
 
-    var bgColor: UIColor { .white }
+    public var bgColor: UIColor { .white }
 
-    var tintColor: UIColor { .black }
+    public var tintColor: UIColor { .black }
 
-    var border: Border { Border(color: .red, width: 2, edges: [.bottom]) }
+    public var border: Border { Border(color: .red, width: 2, edges: [.bottom]) }
 
-    var radius: Radius { .none }
+    public var radius: Radius { .none }
 
     public init() { }
 

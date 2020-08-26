@@ -25,6 +25,8 @@ class RootViewController: UIViewController {
             .center(to: view)
             .style(RectShapeStyle())
             .state(.expanded)
+            .itemUnselectedStyle(CapsuleShapeStyle())
+            .itemSelectedStyle(CapsuleBorderStyle())
         
     }
 
