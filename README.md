@@ -1,6 +1,10 @@
 ![Project Logo](./Logo.png)
 
+![License MIT](https://img.shields.io/github/license/LenisDev/Calendar)
 ![CI Tests](https://github.com/LenisDev/Calendar/workflows/GHActionCI/badge.svg)
+![Carthage compatibility](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat")
+![pod](https://img.shields.io/cocoapods/v/CustomCalendar.svg)
+![Plateform compatibility](https://img.shields.io/cocoapods/p/CustomCalendar)
 
 - [Overview](#overview)
 - [Usage](#usage)
