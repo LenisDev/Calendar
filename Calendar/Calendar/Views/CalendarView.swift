@@ -127,7 +127,7 @@ public extension CalendarView {
 public extension CalendarView {
 
     @discardableResult
-    func loadDatesFor(month: Date, selectDay: Int) -> Self {
+    func loadDatesFor(month: Date, selectDay: Int?) -> Self {
         self.data.loadDatesFor(month: month, selectDay: selectDay)
 
         return self

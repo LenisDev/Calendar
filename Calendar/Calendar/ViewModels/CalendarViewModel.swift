@@ -25,7 +25,7 @@ public struct CalendarViewModel: BaseViewModel {
 
 public extension CalendarViewModel {
 
-    mutating func loadDatesFor(month: Date, selectDay: Int) {
+    mutating func loadDatesFor(month: Date, selectDay: Int?) {
         let dates = CalendarDate().generateDatesForMonth(from: month)
 
         self.items = dates.map { DayViewModel(id: $0.day.description, date: $0, state: ($0.day == selectDay) ? .selected : .unSelected) }
