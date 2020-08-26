@@ -11,8 +11,13 @@ import Foundation
 public struct CalendarDate {
     
     // Initial Properties
-    var calendar: Calendar
-    
+    private var calendar: Calendar
+
+    /// Initializes `CalendarDate` with given `Calendar`, `TimeZone` and `Locale`
+    /// - Parameters:
+    ///   - customCalendar: Calendar to be used for dates
+    ///   - timeZone: timezone to be used for dates
+    ///   - local: local to be used to dates
     public init(customCalendar: Calendar = Calendar.current,
                 timeZone: TimeZone = TimeZone.current,
                 local: Locale = Locale.current) {
@@ -25,7 +30,10 @@ public struct CalendarDate {
 
 // MARK: - Implimentation
 extension CalendarDate: CalendarDateProvider {
-    
+
+    /// Generates days for given month
+    /// - Parameter date: date object for month
+    /// - Returns: array of `Date` for given month
     public func generateDatesForMonth(from date: Date) -> [Date] {
         
         if let totalDaysInMonth = calendar.range(of: .day, in: .month, for: date)?.count {

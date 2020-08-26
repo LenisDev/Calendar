@@ -9,7 +9,10 @@
 import Foundation
 
 extension String {
-    
+
+    /// Converts string to date with given date format
+    /// - Parameter format: date format
+    /// - Returns: Self
     func toDate(_ format: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current

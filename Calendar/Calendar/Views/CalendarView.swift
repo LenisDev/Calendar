@@ -9,22 +9,37 @@
 import Foundation
 import UIKit
 
+/// Calendar presentation view
 public class CalendarView: BaseView<CalendarViewModel> {
 
+    // MARK: - Properties
+    /// `UICollectionViewFlowLayout` for `calendarCV` collectionview
     private(set) lazy var collectionViewLayout = UICollectionViewFlowLayout()
+
+    /// `UICollectionView` used to display dates in for month
     private(set) lazy var calendarCV = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
 
+    /// Unselected item style
     private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
+
+    /// Selected item style
     private(set) var itemSelectedStyle: Stylable = CapsuleBorderStyle()
 
+    /// Calendar presentation state
     private(set) var state = CalendarViewState.expanded {
         didSet {
             self.setupCollectionViewLayout()
         }
     }
 
+    /// Closure confirming to day selection
     private(set) var onDaySelected: (DayViewModel) -> Void
 
+    // MARK: - Init
+    /// Initializes `CalendarView` with data provided
+    /// - Parameters:
+    ///   - data: contains days to shown for month
+    ///   - onDaySelected: closure invoked when day is selected
     public init(data: CalendarViewModel,
                 onDaySelected: @escaping (DayViewModel) -> Void) {
         self.onDaySelected = onDaySelected
@@ -36,6 +51,7 @@ public class CalendarView: BaseView<CalendarViewModel> {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Setups
     override func setupViews() {
         super.setupViews()
 
@@ -126,6 +142,11 @@ public extension CalendarView {
 
 public extension CalendarView {
 
+    /// Helper for loading days for given month
+    /// - Parameters:
+    ///   - month: date object with month to be loaded
+    ///   - selectDay: day which should be selected
+    /// - Returns: Self
     @discardableResult
     func loadDatesFor(month: Date, selectDay: Int?) -> Self {
         self.data.loadDatesFor(month: month, selectDay: selectDay)
@@ -133,6 +154,9 @@ public extension CalendarView {
         return self
     }
 
+    /// Changes `CalendarView`'s presentation state
+    /// - Parameter state: new state - `CalendarViewState`
+    /// - Returns: Self
     @discardableResult
     func state(_ state: CalendarViewState) -> Self {
         self.state = state
