@@ -1,11 +1,11 @@
-# Calendar
+![Project Logo](./Logo.png)
 Easy to use functional calendar for iOS projects.
 
 ### Usage
 ```swift
 
   // Step 1 - create
-  let calendarView = CalendarView(data: CalendarViewModel()) { selectedDay in
+  let calendarView = CalendarView(data: CalendarViewModel()) {[weak self] (selectedDay) in
       print(selectedDay)
   }
     
