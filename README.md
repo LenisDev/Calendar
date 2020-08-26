@@ -1,10 +1,15 @@
 ![Project Logo](./Logo.png)
-Easy to use functional calendar for iOS projects.
 
 ![CI Tests](https://github.com/LenisDev/Calendar/workflows/GHActionCI/badge.svg)
 
+- [Overview](#overview)
 - [Usage](#usage)
+- [Installation Guide](#installation-guide)
 - [Full Documentation](https://lenisdev.github.io/Calendar/index.html)
+- [Contribute](#contribute)
+
+### Overview
+Easy to use functional calendar for iOS projects.
 
 ### Usage
 ```swift
