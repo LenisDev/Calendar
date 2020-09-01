@@ -8,20 +8,22 @@
 
 import Foundation
 
-struct CalendarWeekHeaderViewModel: BaseViewModel {
-    var id: Int // Day number in week
+public struct CalendarWeekHeaderViewModel: BaseViewModel {
+    public var id = UUID()
 
-    let dayName: String
+    let weekDays: [CalendarWeekDayViewModel]
 }
 
-extension CalendarWeekHeaderViewModel {
+public extension CalendarWeekHeaderViewModel {
 
-    static func generateWeekDays() -> [CalendarWeekHeaderViewModel] {
-        return Calendar
-                .current
-                .weekdaySymbols
-                .enumerated()
-                .map { (index, element) in CalendarWeekHeaderViewModel(id: index, dayName: element) }
+    static func generateWeekDays() -> CalendarWeekHeaderViewModel {
+        let weekDays = Calendar
+                        .current
+                        .weekdaySymbols
+                        .enumerated()
+                        .map { (index, element) in CalendarWeekDayViewModel(id: index, dayName: element) }
+
+        return CalendarWeekHeaderViewModel(weekDays: weekDays)
     }
 
 }

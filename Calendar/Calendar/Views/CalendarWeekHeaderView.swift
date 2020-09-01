@@ -10,18 +10,27 @@ import UIKit
 
 class CalendarWeekHeaderView: BaseView<CalendarWeekHeaderViewModel> {
 
-    private(set) lazy var dayNameLbl = UILabel()
+    override var intrinsicContentSize: CGSize { CGSize(width: self.frame.width, height: 80) }
+    
+    private(set) lazy var rootSV = UIStackView(arrangedSubViews: [], axis: .horizontal)
 
     override func setupViews() {
         super.setupViews()
 
-        self.dayNameLbl.sameSize(as: self)
+        // reset
+        self.rootSV.removeFromSuperview()
+        self.rootSV.removeAllArrangedSubviews()
+        self.rootSV.sameSize(as: self)
     }
 
     override func setupData() {
         super.setupData()
 
-        self.dayNameLbl.text = data.dayName
+        self.data
+            .weekDays
+            .forEach { day in
+                self.rootSV.addArrangedSubview(CalendarWeekDayView(data: day))
+            }
     }
 
 }
