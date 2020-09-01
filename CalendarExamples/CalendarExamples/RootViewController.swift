@@ -11,7 +11,7 @@ import Calendar
 
 class RootViewController: UIViewController {
 
-    let calendarView = CalendarView(data: CalendarViewModel()) { selectedDay in
+    let calendarView = CalendarDayListView(data: CalendarDayListViewModel()) { selectedDay in
         print(selectedDay)
     }
 

@@ -17,7 +17,7 @@ public enum CalendarViewState {
 
 
 /// Data view model for calendar view
-public struct CalendarViewModel: BaseViewModel {
+public struct CalendarDayListViewModel: BaseViewModel {
     public var id = UUID()
 
     /// Data array for displaying list of dates
@@ -29,7 +29,7 @@ public struct CalendarViewModel: BaseViewModel {
     }
 }
 
-public extension CalendarViewModel {
+public extension CalendarDayListViewModel {
 
     /// Generates and add `DayViewModel` array to `items`, which represents days in month
     /// - Parameters:
