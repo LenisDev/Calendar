@@ -21,7 +21,7 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = .white
 
         calendarView
-            .with(width: 350, height: 350)
+            .with(width: 350, height: 400)
             .center(to: view)
             .style(RectShapeStyle())
             //.state(.expanded)
