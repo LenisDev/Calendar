@@ -79,7 +79,7 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
         self.collectionViewLayout.scrollDirection = self.state == .collapsed ? .horizontal : .vertical
         self.calendarCV.isPagingEnabled = true
 
-        self.collectionViewLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        self.collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         self.collectionViewLayout.minimumInteritemSpacing = 5
         self.collectionViewLayout.minimumLineSpacing = 5
     }
