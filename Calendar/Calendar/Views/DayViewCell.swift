@@ -46,7 +46,10 @@ class DayViewCell: BaseCell<DayViewModel> {
 extension DayViewCell {
 
     @objc private func onTapGesture() {
-        self.delegate?.didSelectDay(data!)
+        var day = data!
+        day.state = .selected
+
+        self.delegate?.didSelectDay(day)
     }
 
 }

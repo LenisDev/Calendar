@@ -133,11 +133,11 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     public func didSelectDay(_ day: DayViewModel) {
-        self.onDaySelected(day)
-
         self.data.changeDateSelection(to: day.date)
 
         self.calendarCV.reloadData()
+
+        self.onDaySelected(day)
     }
 
 }
@@ -147,26 +147,26 @@ public extension CalendarDayListView {
 
     /// Style applied when item's state is unselected
     /// - Parameter style: style for view
-    /// - Returns: `TabBarView`
+    /// - Returns: `CalendarDayListView`
     @discardableResult
     func itemUnselectedStyle(_ style: Stylable) -> Self {
 
         self.itemUnselectedStyle = style
 
-        calendarCV.reloadData()
+        self.calendarCV.reloadData()
 
         return self
     }
 
     /// Style applied when item's state is selected
     /// - Parameter style: style for view
-    /// - Returns: `TabBarView`
+    /// - Returns: `CalendarDayListView`
     @discardableResult
     func itemSelectedStyle(_ style: Stylable) -> Self {
 
         self.itemSelectedStyle = style
 
-        calendarCV.reloadData()
+        self.calendarCV.reloadData()
 
         return self
     }
