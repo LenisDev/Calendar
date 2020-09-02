@@ -33,4 +33,16 @@ class CalendarWeekHeaderView: BaseView<CalendarWeekHeaderViewModel> {
             }
     }
 
+    @discardableResult
+    override func tintColor(_ color: UIColor) -> Self {
+
+        self.rootSV
+            .arrangedSubviews
+            .forEach {
+                ($0 as? CalendarWeekDayView)?.tintColor(color)
+            }
+
+        return self
+    }
+
 }

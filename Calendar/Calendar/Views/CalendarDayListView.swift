@@ -107,6 +107,7 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // One extra block for spacing
         return CGSize(width: collectionView.bounds.size.width / 8, height: collectionView.bounds.size.width / 8)
     }
 

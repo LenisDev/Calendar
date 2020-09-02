@@ -25,4 +25,11 @@ class CalendarWeekDayView: BaseView<CalendarWeekDayViewModel> {
         self.dayNameLbl.text = data.dayName.first?.description
     }
 
+    @discardableResult
+    override func tintColor(_ color: UIColor) -> Self {
+        self.dayNameLbl.textColor = color
+
+        return self
+    }
+
 }

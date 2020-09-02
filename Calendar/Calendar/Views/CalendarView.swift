@@ -36,3 +36,28 @@ public class CalendarView: BaseView<CalendarViewModel> {
     }
 
 }
+
+public extension CalendarView {
+
+    @discardableResult
+    func weekHeaderViewStyle(_ style: Stylable) -> Self {
+        self.weekHeaderView.style(style)
+
+        return self
+    }
+
+    @discardableResult
+    func itemUnselectedStyle(_ style: Stylable) -> Self {
+        self.calendarDayListView.itemUnselectedStyle(style)
+
+        return self
+    }
+
+    @discardableResult
+    func itemSelectedStyle(_ style: Stylable) -> Self {
+        self.calendarDayListView.itemSelectedStyle(style)
+
+        return self
+    }
+
+}
