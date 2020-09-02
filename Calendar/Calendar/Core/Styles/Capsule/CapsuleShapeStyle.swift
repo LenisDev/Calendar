@@ -17,7 +17,7 @@ public struct CapsuleShapeStyle: Stylable {
 
     public var border: Border { .none }
 
-    public var radius: Radius { Radius(size: 25, corners: [.allCorners]) }
+    public var radius: Radius { Radius(size: 22, corners: [.allCorners]) }
 
     public init() { }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class CalendarWeekHeaderView: BaseView<CalendarWeekHeaderViewModel> {
 
-    override var intrinsicContentSize: CGSize { CGSize(width: self.frame.width, height: 80) }
+    override var intrinsicContentSize: CGSize { CGSize(width: self.frame.width, height: 50) }
     
     private(set) lazy var rootSV = UIStackView(arrangedSubViews: [], axis: .horizontal)
 

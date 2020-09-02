@@ -79,8 +79,8 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
         self.calendarCV.isPagingEnabled = true
 
         self.collectionViewLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        self.collectionViewLayout.minimumInteritemSpacing = 0
-        self.collectionViewLayout.minimumLineSpacing = 0
+        self.collectionViewLayout.minimumInteritemSpacing = 5
+        self.collectionViewLayout.minimumLineSpacing = 5
     }
 
     public func collectionView(_ collectionView: UICollectionView,
@@ -106,7 +106,7 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width / 7, height: collectionView.bounds.size.width / 7)
+        return CGSize(width: collectionView.bounds.size.width / 8, height: collectionView.bounds.size.width / 8)
     }
 
     public func didSelectDay(_ day: DayViewModel) {
