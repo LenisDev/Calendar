@@ -19,5 +19,4 @@ struct RectStyle: Stylable {
 
     var radius: Radius { .none }
 
-
 }

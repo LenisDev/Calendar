@@ -21,3 +21,16 @@ public struct DayViewModel: BaseViewModel {
     let date: Date
     var state: DayState = .unSelected
 }
+
+public extension DayViewModel {
+
+    func isSameWeekDay(of weekDayNo: Int) -> Bool {
+
+        let day = (weekDayNo < 7) ? weekDayNo : weekDayNo % 7
+
+        let weekDay = Calendar.current.shortWeekdaySymbols[day]
+
+        return self.date.dayShortName == weekDay
+    }
+
+}

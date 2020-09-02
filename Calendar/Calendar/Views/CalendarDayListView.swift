@@ -32,6 +32,9 @@ public class CalendarDayListView: BaseView<CalendarDayListViewModel> {
         }
     }
 
+    // number of days should be left before starting current month
+    private(set) lazy var paddingNumberDays = 0
+
     /// Closure confirming to day selection
     private(set) var onDaySelected: (DayViewModel) -> Void
 
@@ -63,12 +66,24 @@ public class CalendarDayListView: BaseView<CalendarDayListViewModel> {
         self.calendarCV.backgroundColor = .clear
 
         self.calendarCV.register(DayViewCell.self)
+        self.calendarCV.register(UICollectionViewCell.self)
     }
 
     override func setupData() {
         super.setupData()
 
-        calendarCV.reloadData()
+        self.checkAndSetupDaysForPadding()
+        self.calendarCV.reloadData()
+    }
+
+    private func checkAndSetupDaysForPadding() {
+
+        guard let safeFirstDay = data.items.first else { return }
+
+        while !safeFirstDay.isSameWeekDay(of: self.paddingNumberDays) {
+            self.paddingNumberDays += 1
+        }
+        
     }
 
 }
@@ -86,22 +101,28 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
 
     public func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
-        return self.data.items.count
+        return self.data.items.count + self.paddingNumberDays
     }
 
     public func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(DayViewCell.self, for: indexPath)
-        cell.data = data.items[indexPath.row]
-        cell.delegate = self
 
-        if cell.data?.state.rawValue == DayState.selected.rawValue {
-            cell.style(itemSelectedStyle)
+        if indexPath.row >= self.paddingNumberDays {
+            let cell = collectionView.dequeue(DayViewCell.self, for: indexPath)
+            cell.data = data.items[indexPath.row - self.paddingNumberDays]
+            cell.delegate = self
+
+            if cell.data?.state.rawValue == DayState.selected.rawValue {
+                cell.style(itemSelectedStyle)
+            } else {
+                cell.style(itemUnselectedStyle)
+            }
+
+            return cell
         } else {
-            cell.style(itemUnselectedStyle)
+            return collectionView.dequeue(UICollectionViewCell.self, for: indexPath)
         }
 
-        return cell
     }
 
     public func collectionView(_ collectionView: UICollectionView,

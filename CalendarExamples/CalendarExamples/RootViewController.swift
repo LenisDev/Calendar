@@ -24,7 +24,7 @@ class RootViewController: UIViewController {
             .with(width: 350, height: 300)
             .center(to: view)
             .weekHeaderViewStyle(RectStyle())
-
+            .itemUnselectedStyle(RectStyle())
 
             //.style(RectShapeStyle())
             //.state(.expanded)
