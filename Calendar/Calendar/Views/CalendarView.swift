@@ -47,7 +47,7 @@ public extension CalendarView {
         }
 
         if let selectedItemStyle = style.selected {
-            self.calendarDayListView.itemUnselectedStyle(selectedItemStyle)
+            self.calendarDayListView.itemSelectedStyle(selectedItemStyle)
         }
 
         if let todayItemStyle = style.today {

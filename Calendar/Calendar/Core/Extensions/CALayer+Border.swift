@@ -18,6 +18,7 @@ public extension CALayer {
     func border(_ color: UIColor, width: CGFloat, edge: UIRectEdge) {
 
         let border = CALayer()
+        border.name = edge.rawValue.description
 
         switch edge {
         case .top:
@@ -44,4 +45,8 @@ public extension CALayer {
         self.addSublayer(border)
     }
 
+}
+
+extension UIRectEdge {
+    static var allEdgeProperties: [UIRectEdge] { [.top, .left, .bottom, .right, .all] }
 }
