@@ -60,6 +60,7 @@ public class CalendarDayListView: BaseView<CalendarDayListViewModel> {
 
         self.calendarCV.dataSource = self
         self.calendarCV.delegate = self
+        self.calendarCV.backgroundColor = .clear
 
         self.calendarCV.register(DayViewCell.self)
     }
