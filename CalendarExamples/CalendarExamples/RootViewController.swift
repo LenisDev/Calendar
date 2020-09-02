@@ -23,8 +23,7 @@ class RootViewController: UIViewController {
         calendarView
             .with(width: 350, height: 300)
             .center(to: view)
-            .weekHeaderViewStyle(RectStyle())
-            .itemUnselectedStyle(RectStyle())
+            .dayStyle(CalendarDayStyle())
 
             //.style(RectShapeStyle())
             //.state(.expanded)

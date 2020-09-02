@@ -40,22 +40,20 @@ public class CalendarView: BaseView<CalendarViewModel> {
 public extension CalendarView {
 
     @discardableResult
-    func weekHeaderViewStyle(_ style: Stylable) -> Self {
-        self.weekHeaderView.style(style)
+    func dayStyle(_ style: DayStylable) -> CalendarView {
 
-        return self
-    }
+        if let unselectedItemStyle = style.unselected {
+            self.calendarDayListView.itemUnselectedStyle(unselectedItemStyle)
+        }
 
-    @discardableResult
-    func itemUnselectedStyle(_ style: Stylable) -> Self {
-        self.calendarDayListView.itemUnselectedStyle(style)
+        if let selectedItemStyle = style.selected {
+            self.calendarDayListView.itemUnselectedStyle(selectedItemStyle)
+        }
 
-        return self
-    }
+        if let todayItemStyle = style.today {
+            self.calendarDayListView.itemTodayStyle(todayItemStyle)
+        }
 
-    @discardableResult
-    func itemSelectedStyle(_ style: Stylable) -> Self {
-        self.calendarDayListView.itemSelectedStyle(style)
 
         return self
     }

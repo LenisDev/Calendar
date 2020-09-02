@@ -19,11 +19,14 @@ public class CalendarDayListView: BaseView<CalendarDayListViewModel> {
     /// `UICollectionView` used to display dates in for month
     private(set) lazy var calendarCV = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
 
-    /// Unselected item style
-    private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
+    /// Today item style
+    private(set) var itemTodayStyle: Stylable = CapsuleBorderStyle()
 
     /// Selected item style
     private(set) var itemSelectedStyle: Stylable = CapsuleBorderStyle()
+
+    /// Unselected item style
+    private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
 
     /// Calendar presentation state
     private(set) var state = CalendarViewState.expanded {
@@ -112,10 +115,15 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
             cell.data = data.items[indexPath.row - self.paddingNumberDays]
             cell.delegate = self
 
-            if cell.data?.state.rawValue == DayState.selected.rawValue {
-                cell.style(itemSelectedStyle)
+
+            let isSelected = cell.data?.state.rawValue == DayState.selected.rawValue
+
+            if cell.data?.date.isToday == true && !isSelected { // !isSelected -> to avoid unwanted override
+                cell.style(self.itemTodayStyle)
+            } else if isSelected {
+                cell.style(self.itemSelectedStyle)
             } else {
-                cell.style(itemUnselectedStyle)
+                cell.style(self.itemUnselectedStyle)
             }
 
             return cell
@@ -144,6 +152,19 @@ extension CalendarDayListView: UICollectionViewDelegate, UICollectionViewDataSou
 
 // MARK: - Style
 public extension CalendarDayListView {
+
+    /// Style applied when item's state is unselected
+    /// - Parameter style: style for view
+    /// - Returns: `CalendarDayListView`
+    @discardableResult
+    func itemTodayStyle(_ style: Stylable) -> Self {
+
+        self.itemTodayStyle = style
+
+        self.calendarCV.reloadData()
+
+        return self
+    }
 
     /// Style applied when item's state is unselected
     /// - Parameter style: style for view

@@ -27,6 +27,7 @@
 		1308320F24F4E46A0082D003 /* RectBottomBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */; };
 		1308321124F4E46A0082D003 /* RectBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320D24F4E46A0082D003 /* RectBorderStyle.swift */; };
 		1308321224F4E46A0082D003 /* CapsuleBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */; };
+		131674CB24FFF6C300EA2864 /* DayStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131674CA24FFF6C300EA2864 /* DayStylable.swift */; };
 		136299BA24FEA383007126F2 /* CalendarWeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136299B924FEA383007126F2 /* CalendarWeekHeaderView.swift */; };
 		136299BC24FEA461007126F2 /* CalendarWeekHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136299BB24FEA461007126F2 /* CalendarWeekHeaderViewModel.swift */; };
 		136299BE24FEA708007126F2 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136299BD24FEA708007126F2 /* CalendarView.swift */; };
@@ -81,6 +82,7 @@
 		1308320B24F4E4690082D003 /* RectBottomBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBottomBorderStyle.swift; sourceTree = "<group>"; };
 		1308320D24F4E46A0082D003 /* RectBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBorderStyle.swift; sourceTree = "<group>"; };
 		1308320E24F4E46A0082D003 /* CapsuleBorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleBorderStyle.swift; sourceTree = "<group>"; };
+		131674CA24FFF6C300EA2864 /* DayStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStylable.swift; sourceTree = "<group>"; };
 		136299B924FEA383007126F2 /* CalendarWeekHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekHeaderView.swift; sourceTree = "<group>"; };
 		136299BB24FEA461007126F2 /* CalendarWeekHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekHeaderViewModel.swift; sourceTree = "<group>"; };
 		136299BD24FEA708007126F2 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				130831F324F4E1DA0082D003 /* Radius.swift */,
 				130831F124F4E1C20082D003 /* DesignableView.swift */,
 				130831F524F4E1ED0082D003 /* Stylable.swift */,
+				131674CA24FFF6C300EA2864 /* DayStylable.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				130831F024F4E1AD0082D003 /* Border.swift in Sources */,
 				136299BC24FEA461007126F2 /* CalendarWeekHeaderViewModel.swift in Sources */,
 				13C7D5AD24F4EFCC00FB1992 /* DatePropertyProvider.swift in Sources */,
+				131674CB24FFF6C300EA2864 /* DayStylable.swift in Sources */,
 				136299C424FEA9EA007126F2 /* CalendarWeekDayViewModel.swift in Sources */,
 				13C7D5B224F4F05F00FB1992 /* CalendarDate.swift in Sources */,
 				136299BA24FEA383007126F2 /* CalendarWeekHeaderView.swift in Sources */,
