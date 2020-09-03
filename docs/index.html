@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Calendar 0.0.1 Docs
+          Calendar 0.0.2 Docs
         </a>
          (100% documented)
       </p>
@@ -216,20 +216,38 @@
 <h3 id='overview' class='heading'>Overview</h3>
 
 <p>Easy to use functional calendar for iOS projects.</p>
+
+<ul>
+<li>Expanded <em>(Rect style)</em></li>
+</ul>
+
+<p><img src="./assets/rect_style_expanded_state.png" alt="expanded_rect"></p>
+
+<ul>
+<li>Expanded <em>(Round style)</em></li>
+</ul>
+
+<p><img src="./assets/round_style_expanded_state.png" alt="expanded_rect"></p>
+
+<ul>
+<li>Collapsed <em>(Rect style)</em></li>
+</ul>
+
+<p><img src="./assets/rect_style_collapsed_state.png" alt="expanded_rect"></p>
+
+<p>Checkout <a href="https://github.com/LenisDev/Calendar/tree/master/CalendarExamples/CalendarExamples">example project</a></p>
 <h3 id='usage' class='heading'>Usage</h3>
 <pre class="highlight swift"><code>
   <span class="c1">// Step 1 - create</span>
-  <span class="k">let</span> <span class="nv">calendarView</span> <span class="o">=</span> <span class="kt">CalendarView</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">CalendarViewModel</span><span class="p">())</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span> <span class="k">in</span>
-      <span class="nf">print</span><span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span>
-  <span class="p">}</span>
+  <span class="k">let</span> <span class="nv">calendarView</span> <span class="o">=</span> <span class="kt">CalendarView</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">CalendarViewModel</span><span class="p">(</span><span class="nv">days</span><span class="p">:</span> <span class="kt">CalendarDayListViewModel</span><span class="p">(),</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="kt">CalendarWeekHeaderViewModel</span><span class="o">.</span><span class="nf">generateWeekDays</span><span class="p">()))</span> <span class="p">{</span> <span class="n">selectedDay</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span>
+    <span class="p">}</span>
 
   <span class="c1">// Step 2: Customize</span>
   <span class="n">calendarView</span>
-      <span class="o">.</span><span class="nf">style</span><span class="p">(</span><span class="kt">RectShapeStyle</span><span class="p">())</span>
-      <span class="o">.</span><span class="nf">state</span><span class="p">(</span><span class="o">.</span><span class="n">expanded</span><span class="p">)</span>
-      <span class="o">.</span><span class="nf">itemUnselectedStyle</span><span class="p">(</span><span class="kt">CapsuleShapeStyle</span><span class="p">())</span>
-      <span class="o">.</span><span class="nf">itemSelectedStyle</span><span class="p">(</span><span class="kt">CapsuleBorderStyle</span><span class="p">())</span>
-
+    <span class="o">.</span><span class="nf">dayStyle</span><span class="p">(</span><span class="kt">CalendarDayStyle</span><span class="p">())</span>
+    <span class="o">.</span><span class="nf">weekHeaderStyle</span><span class="p">(</span><span class="kt">DefaultStyle</span><span class="p">())</span>
+    <span class="o">.</span><span class="nf">dayPresentation</span><span class="p">(</span><span class="o">.</span><span class="n">expanded</span><span class="p">)</span>
 </code></pre>
 
 <p><br></p>
@@ -238,7 +256,7 @@
 
 <p>Step 1: 
 Add following to your CartFile</p>
-<pre class="highlight plaintext"><code>github "LenisDev/Calendar" ~&gt; 0.0.1
+<pre class="highlight plaintext"><code>github "LenisDev/Calendar" ~&gt; 0.0.2
 </code></pre>
 
 <p>Step 2:
@@ -250,9 +268,9 @@ run <code>carthage update</code> from current project directory.</p>
 <h4 id='cocoapods' class='heading'>CocoaPods</h4>
 
 <p>Step 1:
-Add <code>pod &#39;CustomCalendar&#39;, &#39;~&gt; 0.0.1&#39;</code> to your Podfile:</p>
+Add <code>pod &#39;CustomCalendar&#39;, &#39;~&gt; 0.0.2&#39;</code> to your Podfile:</p>
 <pre class="highlight plaintext"><code>target 'MyApp' do
-  pod 'CustomCalendar', '~&gt; 0.0.1'
+  pod 'CustomCalendar', '~&gt; 0.0.2'
 end
 </code></pre>
 
@@ -272,7 +290,7 @@ run <code>pod install</code> from current project directory.</p>
 <p><br></p>
 <h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
 <pre class="highlight plaintext"><code>dependencies: [
-    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.2"))
 ]
 </code></pre>
 
