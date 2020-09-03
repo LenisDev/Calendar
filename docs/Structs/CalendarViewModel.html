@@ -60,7 +60,16 @@
                 <a class="nav-group-task-link" href="../Classes/BaseView.html">BaseView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CalendarDayListView.html">CalendarDayListView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CalendarView.html">CalendarView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CalendarWeekDayView.html">CalendarWeekDayView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CalendarWeekHeaderView.html">CalendarWeekHeaderView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DayViewCell.html">DayViewCell</a>
@@ -100,6 +109,9 @@
                 <a class="nav-group-task-link" href="../Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIRectEdge.html">UIRectEdge</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIStackView.html">UIStackView</a>
               </li>
               <li class="nav-group-task">
@@ -118,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DatePropertyProvider.html">DatePropertyProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DayStylable.html">DayStylable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DayViewDelegate.html">DayViewDelegate</a>
@@ -140,7 +155,16 @@
                 <a class="nav-group-task-link" href="../Structs/CalendarDate.html">CalendarDate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/CalendarViewModel.html">CalendarViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CalendarWeekDayViewModel.html">CalendarWeekDayViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/CapsuleBorderStyle.html">CapsuleBorderStyle</a>
@@ -182,8 +206,7 @@
 
                 </div>
               </div>
-            <p>Data view model for calendar view</p>
-
+            
           </div>
         </section>
 
@@ -220,9 +243,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CustomCalendar0B9ViewModelV5itemsSayAA03DaycD0VGvp"></a>
-                    <a name="//apple_ref/swift/Property/items" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV5itemsSayAA03DaycD0VGvp">items</a>
+                    <a name="/s:14CustomCalendar0B9ViewModelV4daysAA0b7DayListcD0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/days" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV4daysAA0b7DayListcD0Vvp">days</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,14 +253,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Data array for displaying list of dates</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DayViewModel.html">DayViewModel</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">days</span><span class="p">:</span> <span class="kt"><a href="../Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a></span></code></pre>
 
                         </div>
                       </div>
@@ -247,9 +269,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CustomCalendar0B9ViewModelVACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelVACycfc">init()</a>
+                    <a name="/s:14CustomCalendar0B9ViewModelV8weekDaysAA0b10WeekHeadercD0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/weekDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV8weekDaysAA0b10WeekHeadercD0Vvp">weekDays</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,14 +279,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializer, loads current month dates by default</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="kt"><a href="../Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a></span></code></pre>
 
                         </div>
                       </div>
@@ -274,9 +295,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CustomCalendar0B9ViewModelV12loadDatesFor5month9selectDayy10Foundation4DateV_SiSgtF"></a>
-                    <a name="//apple_ref/swift/Method/loadDatesFor(month:selectDay:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV12loadDatesFor5month9selectDayy10Foundation4DateV_SiSgtF">loadDatesFor(month:<wbr>selectDay:<wbr>)</a>
+                    <a name="/s:14CustomCalendar0B9ViewModelV4days8weekDaysAcA0b7DayListcD0V_AA0b10WeekHeadercD0Vtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(days:weekDays:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV4days8weekDaysAcA0b7DayListcD0V_AA0b10WeekHeadercD0Vtcfc">init(days:<wbr>weekDays:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,93 +305,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Generates and add <code><a href="../Structs/DayViewModel.html">DayViewModel</a></code> array to <code><a href="../Structs/CalendarViewModel.html#/s:14CustomCalendar0B9ViewModelV5itemsSayAA03DaycD0VGvp">items</a></code>, which represents days in month</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">loadDatesFor</span><span class="p">(</span><span class="nv">month</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">selectDay</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">days</span><span class="p">:</span> <span class="kt"><a href="../Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a></span><span class="p">,</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="kt"><a href="../Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a></span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>month</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Date object</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>selectDay</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>day that should be selected (optional)</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14CustomCalendar0B9ViewModelV19changeDateSelection2toy10Foundation0F0V_tF"></a>
-                    <a name="//apple_ref/swift/Method/changeDateSelection(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CustomCalendar0B9ViewModelV19changeDateSelection2toy10Foundation0F0V_tF">changeDateSelection(to:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Changes date selection to given date object</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">changeDateSelection</span><span class="p">(</span><span class="n">to</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>date</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>date object, cotaining date to be selected</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -383,7 +326,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-09-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
