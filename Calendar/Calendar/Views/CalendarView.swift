@@ -58,4 +58,10 @@ public extension CalendarView {
         return self
     }
 
+    @discardableResult
+    func weekHeaderStyle(_ style: Stylable) -> CalendarView {
+        self.weekHeaderView.style(style)
+
+        return self
+    }
 }

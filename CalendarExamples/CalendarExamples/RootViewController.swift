@@ -24,6 +24,7 @@ class RootViewController: UIViewController {
             .with(width: 350, height: 300)
             .center(to: view)
             .dayStyle(CalendarDayStyle())
+            .weekHeaderStyle(DefaultStyle())
 
             //.style(RectShapeStyle())
             //.state(.expanded)
