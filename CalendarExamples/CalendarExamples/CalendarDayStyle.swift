@@ -13,7 +13,7 @@ struct CalendarDayStyle: DayStylable {
 
     var today: Stylable? = RoundStyle()
 
-    var selected: Stylable? = RectBorderStyle()
+    var selected: Stylable? = CapsuleBorderStyle()//RectBorderStyle()
 
     var unselected: Stylable? = DefaultStyle()
 
