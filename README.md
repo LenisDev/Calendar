@@ -15,6 +15,19 @@
 ### Overview
 Easy to use functional calendar for iOS projects.
 
+- Expanded *(Rect style)*
+
+![expanded_rect](./assets/rect_style_expanded_state.png)
+
+- Expanded *(Round style)*
+
+![expanded_rect](./assets/round_style_expanded_state.png)
+
+- Collapsed *(Rect style)*
+
+![expanded_rect](./assets/rect_style_collapsed_state.png)
+
+
 ### Usage
 ```swift
 
