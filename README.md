@@ -15,21 +15,32 @@
 ### Overview
 Easy to use functional calendar for iOS projects.
 
+- Expanded *(Rect style)*
+
+![expanded_rect](./assets/rect_style_expanded_state.png)
+
+- Expanded *(Round style)*
+
+![expanded_rect](./assets/round_style_expanded_state.png)
+
+- Collapsed *(Rect style)*
+
+![expanded_rect](./assets/rect_style_collapsed_state.png)
+
+Checkout [example project](https://github.com/LenisDev/Calendar/tree/master/CalendarExamples/CalendarExamples)
 ### Usage
 ```swift
 
   // Step 1 - create
-  let calendarView = CalendarView(data: CalendarViewModel()) {[weak self] (selectedDay) in
-      print(selectedDay)
-  }
+  let calendarView = CalendarView(data: CalendarViewModel(days: CalendarDayListViewModel(), weekDays: CalendarWeekHeaderViewModel.generateWeekDays())) { selectedDay in
+        print(selectedDay)
+    }
     
   // Step 2: Customize
   calendarView
-      .style(RectShapeStyle())
-      .state(.expanded)
-      .itemUnselectedStyle(CapsuleShapeStyle())
-      .itemSelectedStyle(CapsuleBorderStyle())
-      
+    .dayStyle(CalendarDayStyle())
+    .weekHeaderStyle(DefaultStyle())
+    .dayPresentation(.expanded)
 ```
 
 <br>
@@ -42,7 +53,7 @@ Step 1:
 Add following to your CartFile
 
 ```
-github "LenisDev/Calendar" ~> 0.0.1
+github "LenisDev/Calendar" ~> 0.0.2
 ```
 
 Step 2:
@@ -55,11 +66,11 @@ run `carthage update` from current project directory.
 #### CocoaPods
 
 Step 1:
-Add `pod 'CustomCalendar', '~> 0.0.1'` to your Podfile:
+Add `pod 'CustomCalendar', '~> 0.0.2'` to your Podfile:
 
 ```
 target 'MyApp' do
-  pod 'CustomCalendar', '~> 0.0.1'
+  pod 'CustomCalendar', '~> 0.0.2'
 end
 ```
 
@@ -83,7 +94,7 @@ run `pod install` from current project directory.
 #### Swift Package Manager
 ```
 dependencies: [
-    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.2"))
 ]
 ```
 

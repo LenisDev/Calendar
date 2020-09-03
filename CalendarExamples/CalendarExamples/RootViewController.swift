@@ -11,7 +11,7 @@ import Calendar
 
 class RootViewController: UIViewController {
 
-    let calendarView = CalendarView(data: CalendarViewModel()) { selectedDay in
+    let calendarView = CalendarView(data: CalendarViewModel(days: CalendarDayListViewModel(), weekDays: CalendarWeekHeaderViewModel.generateWeekDays())) { selectedDay in
         print(selectedDay)
     }
 
@@ -21,12 +21,16 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = .white
 
         calendarView
-            .with(width: 350, height: 350)
+            .with(width: 350)
             .center(to: view)
-            .style(RectShapeStyle())
-            .state(.expanded)
-            .itemUnselectedStyle(CapsuleShapeStyle())
-            .itemSelectedStyle(CapsuleBorderStyle())
+            .dayStyle(CalendarDayStyle())
+            .weekHeaderStyle(DefaultStyle())
+            .dayPresentation(.expanded)
+
+            //.style(RectShapeStyle())
+            //.state(.expanded)
+            //.itemUnselectedStyle(CapsuleShapeStyle())
+            //.itemSelectedStyle(CapsuleBorderStyle())
         
     }
 

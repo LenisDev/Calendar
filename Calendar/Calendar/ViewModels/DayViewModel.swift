@@ -21,3 +21,30 @@ public struct DayViewModel: BaseViewModel {
     let date: Date
     var state: DayState = .unSelected
 }
+
+public extension DayViewModel {
+
+    func isSameWeekDay(of weekDayNo: Int) -> Bool {
+
+        let totalDaysInWeek = 7
+        let day = (weekDayNo < totalDaysInWeek) ? weekDayNo : weekDayNo % totalDaysInWeek
+
+        let weekDay = Calendar.current.shortWeekdaySymbols[day]
+
+        return self.date.dayShortName == weekDay
+    }
+
+    func isLastDayOfWeek(paddingDay: Int) -> Bool {
+        let lastDayIndex = 6
+
+        if let safeDayIndex = Calendar.current.shortWeekdaySymbols.firstIndex(of: self.date.dayShortName) {
+            let currentDayIndex = safeDayIndex + paddingDay
+
+            return Calendar.current.shortWeekdaySymbols[currentDayIndex] == Calendar.current.shortWeekdaySymbols[lastDayIndex]
+
+        }
+
+        return false
+    }
+
+}

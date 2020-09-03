@@ -11,6 +11,10 @@
 		130831BE24F4DEE30082D003 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130831BD24F4DEE30082D003 /* RootViewController.swift */; };
 		130831C324F4DEE40082D003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130831C224F4DEE40082D003 /* Assets.xcassets */; };
 		130831C624F4DEE40082D003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130831C424F4DEE40082D003 /* LaunchScreen.storyboard */; };
+		131674C924FFE49800EA2864 /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131674C824FFE49800EA2864 /* DefaultStyle.swift */; };
+		131674CD24FFF9DD00EA2864 /* RoundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131674CC24FFF9DD00EA2864 /* RoundStyle.swift */; };
+		131674CF24FFFA3100EA2864 /* CalendarDayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131674CE24FFFA3100EA2864 /* CalendarDayStyle.swift */; };
+		131674D1250009DA00EA2864 /* RectBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131674D0250009DA00EA2864 /* RectBorderStyle.swift */; };
 		13C7D5CC24F5507C00FB1992 /* Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C7D5CB24F5507C00FB1992 /* Calendar.framework */; };
 		13C7D5CD24F5507C00FB1992 /* Calendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13C7D5CB24F5507C00FB1992 /* Calendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -36,6 +40,10 @@
 		130831C224F4DEE40082D003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		130831C524F4DEE40082D003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		130831C724F4DEE40082D003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		131674C824FFE49800EA2864 /* DefaultStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyle.swift; sourceTree = "<group>"; };
+		131674CC24FFF9DD00EA2864 /* RoundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStyle.swift; sourceTree = "<group>"; };
+		131674CE24FFFA3100EA2864 /* CalendarDayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayStyle.swift; sourceTree = "<group>"; };
+		131674D0250009DA00EA2864 /* RectBorderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectBorderStyle.swift; sourceTree = "<group>"; };
 		13C7D5CB24F5507C00FB1992 /* Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				130831BD24F4DEE30082D003 /* RootViewController.swift */,
+				131674C824FFE49800EA2864 /* DefaultStyle.swift */,
+				131674D0250009DA00EA2864 /* RectBorderStyle.swift */,
+				131674CC24FFF9DD00EA2864 /* RoundStyle.swift */,
+				131674CE24FFFA3100EA2864 /* CalendarDayStyle.swift */,
 				130831D424F4DFBE0082D003 /* Supporting Files */,
 			);
 			path = CalendarExamples;
@@ -167,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131674CD24FFF9DD00EA2864 /* RoundStyle.swift in Sources */,
+				131674C924FFE49800EA2864 /* DefaultStyle.swift in Sources */,
 				130831BE24F4DEE30082D003 /* RootViewController.swift in Sources */,
+				131674D1250009DA00EA2864 /* RectBorderStyle.swift in Sources */,
+				131674CF24FFFA3100EA2864 /* CalendarDayStyle.swift in Sources */,
 				130831BA24F4DEE30082D003 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

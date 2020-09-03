@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Calendar 0.0.1 Docs
+          Calendar 0.0.2 Docs
         </a>
          (100% documented)
       </p>
@@ -60,7 +60,16 @@
                 <a class="nav-group-task-link" href="Classes/BaseView.html">BaseView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarDayListView.html">CalendarDayListView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CalendarView.html">CalendarView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarWeekDayView.html">CalendarWeekDayView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarWeekHeaderView.html">CalendarWeekHeaderView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/DayViewCell.html">DayViewCell</a>
@@ -100,6 +109,9 @@
                 <a class="nav-group-task-link" href="Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIRectEdge.html">UIRectEdge</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/UIStackView.html">UIStackView</a>
               </li>
               <li class="nav-group-task">
@@ -118,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DatePropertyProvider.html">DatePropertyProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DayStylable.html">DayStylable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DayViewDelegate.html">DayViewDelegate</a>
@@ -140,7 +155,16 @@
                 <a class="nav-group-task-link" href="Structs/CalendarDate.html">CalendarDate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/CalendarViewModel.html">CalendarViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarWeekDayViewModel.html">CalendarWeekDayViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/CapsuleBorderStyle.html">CapsuleBorderStyle</a>
@@ -273,6 +297,35 @@ at top level (hierarchy) should be added to <code>rootView</code></li>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:14CustomCalendar0B11DayListViewC"></a>
+                    <a name="//apple_ref/swift/Class/CalendarDayListView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B11DayListViewC">CalendarDayListView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calendar presentation view</p>
+
+                        <a href="Classes/CalendarDayListView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CalendarDayListView</span> <span class="p">:</span> <span class="kt"><a href="Classes/BaseView.html">BaseView</a></span><span class="o">&lt;</span><span class="kt"><a href="Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a></span><span class="o">&gt;</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CalendarDayListView</span><span class="p">:</span> <span class="kt">UICollectionViewDelegate</span><span class="p">,</span> <span class="kt">UICollectionViewDataSource</span><span class="p">,</span> <span class="kt"><a href="Protocols/DayViewDelegate.html">DayViewDelegate</a></span><span class="p">,</span> <span class="kt">UICollectionViewDelegateFlowLayout</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:14CustomCalendar0B4ViewC"></a>
                     <a name="//apple_ref/swift/Class/CalendarView" class="dashAnchor"></a>
                     <a class="token" href="#/s:14CustomCalendar0B4ViewC">CalendarView</a>
@@ -283,8 +336,7 @@ at top level (hierarchy) should be added to <code>rootView</code></li>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Calendar presentation view</p>
-
+                        
                         <a href="Classes/CalendarView.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -292,7 +344,60 @@ at top level (hierarchy) should be added to <code>rootView</code></li>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CalendarView</span> <span class="p">:</span> <span class="kt"><a href="Classes/BaseView.html">BaseView</a></span><span class="o">&lt;</span><span class="kt"><a href="Structs/CalendarViewModel.html">CalendarViewModel</a></span><span class="o">&gt;</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CalendarView</span><span class="p">:</span> <span class="kt">UICollectionViewDelegate</span><span class="p">,</span> <span class="kt">UICollectionViewDataSource</span><span class="p">,</span> <span class="kt"><a href="Protocols/DayViewDelegate.html">DayViewDelegate</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CustomCalendar0B11WeekDayViewC"></a>
+                    <a name="//apple_ref/swift/Class/CalendarWeekDayView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B11WeekDayViewC">CalendarWeekDayView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/CalendarWeekDayView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CalendarWeekDayView</span> <span class="p">:</span> <span class="kt"><a href="Classes/BaseView.html">BaseView</a></span><span class="o">&lt;</span><span class="kt"><a href="Structs/CalendarWeekDayViewModel.html">CalendarWeekDayViewModel</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CustomCalendar0B14WeekHeaderViewC"></a>
+                    <a name="//apple_ref/swift/Class/CalendarWeekHeaderView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CustomCalendar0B14WeekHeaderViewC">CalendarWeekHeaderView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/CalendarWeekHeaderView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CalendarWeekHeaderView</span> <span class="p">:</span> <span class="kt"><a href="Classes/BaseView.html">BaseView</a></span><span class="o">&lt;</span><span class="kt"><a href="Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -334,7 +439,7 @@ at top level (hierarchy) should be added to <code>rootView</code></li>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-09-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

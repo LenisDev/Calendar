@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Calendar 0.0.1 Docs
+          Calendar 0.0.2 Docs
         </a>
          (100% documented)
       </p>
@@ -59,7 +59,16 @@
                 <a class="nav-group-task-link" href="Classes/BaseView.html">BaseView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarDayListView.html">CalendarDayListView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CalendarView.html">CalendarView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarWeekDayView.html">CalendarWeekDayView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CalendarWeekHeaderView.html">CalendarWeekHeaderView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/DayViewCell.html">DayViewCell</a>
@@ -99,6 +108,9 @@
                 <a class="nav-group-task-link" href="Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIRectEdge.html">UIRectEdge</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/UIStackView.html">UIStackView</a>
               </li>
               <li class="nav-group-task">
@@ -117,6 +129,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DatePropertyProvider.html">DatePropertyProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DayStylable.html">DayStylable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/DayViewDelegate.html">DayViewDelegate</a>
@@ -139,7 +154,16 @@
                 <a class="nav-group-task-link" href="Structs/CalendarDate.html">CalendarDate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarDayListViewModel.html">CalendarDayListViewModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/CalendarViewModel.html">CalendarViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarWeekDayViewModel.html">CalendarWeekDayViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/CalendarWeekHeaderViewModel.html">CalendarWeekHeaderViewModel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/CapsuleBorderStyle.html">CapsuleBorderStyle</a>
@@ -174,23 +198,113 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <p><img src="./Logo.png" alt="Project Logo">
-Easy to use functional calendar for iOS projects.</p>
+            <p><img src="./Logo.png" alt="Project Logo"></p>
+
+<p><img src="https://img.shields.io/github/license/LenisDev/Calendar" alt="License MIT">
+<img src="https://github.com/LenisDev/Calendar/workflows/GHActionCI/badge.svg" alt="CI Tests">
+<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat%22" alt="Carthage compatibility">
+<img src="https://img.shields.io/cocoapods/v/CustomCalendar.svg" alt="pod">
+<img src="https://img.shields.io/cocoapods/p/CustomCalendar" alt="Plateform compatibility"></p>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#installation-guide">Installation Guide</a></li>
+<li><a href="https://lenisdev.github.io/Calendar/index.html">Full Documentation</a></li>
+<li><a href="#contribute">Contribute</a></li>
+</ul>
+<h3 id='overview' class='heading'>Overview</h3>
+
+<p>Easy to use functional calendar for iOS projects.</p>
+
+<ul>
+<li>Expanded <em>(Rect style)</em></li>
+</ul>
+
+<p><img src="./assets/rect_style_expanded_state.png" alt="expanded_rect"></p>
+
+<ul>
+<li>Expanded <em>(Round style)</em></li>
+</ul>
+
+<p><img src="./assets/round_style_expanded_state.png" alt="expanded_rect"></p>
+
+<ul>
+<li>Collapsed <em>(Rect style)</em></li>
+</ul>
+
+<p><img src="./assets/rect_style_collapsed_state.png" alt="expanded_rect"></p>
+
+<p>Checkout <a href="https://github.com/LenisDev/Calendar/tree/master/CalendarExamples/CalendarExamples">example project</a></p>
 <h3 id='usage' class='heading'>Usage</h3>
 <pre class="highlight swift"><code>
   <span class="c1">// Step 1 - create</span>
-  <span class="k">let</span> <span class="nv">calendarView</span> <span class="o">=</span> <span class="kt">CalendarView</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">CalendarViewModel</span><span class="p">())</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span> <span class="k">in</span>
-      <span class="nf">print</span><span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span>
-  <span class="p">}</span>
+  <span class="k">let</span> <span class="nv">calendarView</span> <span class="o">=</span> <span class="kt">CalendarView</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">CalendarViewModel</span><span class="p">(</span><span class="nv">days</span><span class="p">:</span> <span class="kt">CalendarDayListViewModel</span><span class="p">(),</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="kt">CalendarWeekHeaderViewModel</span><span class="o">.</span><span class="nf">generateWeekDays</span><span class="p">()))</span> <span class="p">{</span> <span class="n">selectedDay</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">selectedDay</span><span class="p">)</span>
+    <span class="p">}</span>
 
   <span class="c1">// Step 2: Customize</span>
   <span class="n">calendarView</span>
-      <span class="o">.</span><span class="nf">style</span><span class="p">(</span><span class="kt">RectShapeStyle</span><span class="p">())</span>
-      <span class="o">.</span><span class="nf">state</span><span class="p">(</span><span class="o">.</span><span class="n">expanded</span><span class="p">)</span>
-      <span class="o">.</span><span class="nf">itemUnselectedStyle</span><span class="p">(</span><span class="kt">CapsuleShapeStyle</span><span class="p">())</span>
-      <span class="o">.</span><span class="nf">itemSelectedStyle</span><span class="p">(</span><span class="kt">CapsuleBorderStyle</span><span class="p">())</span>
-
+    <span class="o">.</span><span class="nf">dayStyle</span><span class="p">(</span><span class="kt">CalendarDayStyle</span><span class="p">())</span>
+    <span class="o">.</span><span class="nf">weekHeaderStyle</span><span class="p">(</span><span class="kt">DefaultStyle</span><span class="p">())</span>
+    <span class="o">.</span><span class="nf">dayPresentation</span><span class="p">(</span><span class="o">.</span><span class="n">expanded</span><span class="p">)</span>
 </code></pre>
+
+<p><br></p>
+<h3 id='installation-guide' class='heading'>Installation Guide</h3>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>Step 1: 
+Add following to your CartFile</p>
+<pre class="highlight plaintext"><code>github "LenisDev/Calendar" ~&gt; 0.0.2
+</code></pre>
+
+<p>Step 2:
+run <code>carthage update</code> from current project directory.</p>
+
+<p><em>That&rsquo;s all, you have it installed.</em></p>
+
+<p><br></p>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>Step 1:
+Add <code>pod &#39;CustomCalendar&#39;, &#39;~&gt; 0.0.2&#39;</code> to your Podfile:</p>
+<pre class="highlight plaintext"><code>target 'MyApp' do
+  pod 'CustomCalendar', '~&gt; 0.0.2'
+end
+</code></pre>
+
+<p>Step 2:
+run <code>pod install</code> from current project directory.</p>
+
+<p><em>That&rsquo;s all, you have it installed.</em></p>
+
+<p><br></p>
+
+<blockquote>
+<p>Try it using following command</p>
+<pre class="highlight plaintext"><code>pod try Tab
+</code></pre>
+</blockquote>
+
+<p><br></p>
+<h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
+<pre class="highlight plaintext"><code>dependencies: [
+    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.2"))
+]
+</code></pre>
+
+<p><br></p>
+<h3 id='contribute' class='heading'>Contribute</h3>
+
+<blockquote>
+
+<ul>
+<li>Play around and report bugs</li>
+<li>Fix issues and create PR</li>
+<li>Add documentations and new features</li>
+</ul>
+</blockquote>
 
           </div>
         </section>
@@ -199,7 +313,7 @@ Easy to use functional calendar for iOS projects.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/Calendar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-09-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

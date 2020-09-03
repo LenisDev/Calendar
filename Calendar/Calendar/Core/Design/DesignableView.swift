@@ -52,6 +52,13 @@ extension DesignableView {
 
     @discardableResult
     public func border(_ value: Border) -> Self {
+
+        // remove exisitng
+        UIRectEdge.allEdgeProperties.forEach { edge in
+            self.layer.sublayers?.removeAll(where: { $0.name == edge.rawValue.description })
+        }
+
+        // add new
         value.edges.forEach { edge in
             self.layer.border(value.color, width: value.width, edge: edge)
         }
