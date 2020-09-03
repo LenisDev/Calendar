@@ -64,4 +64,11 @@ public extension CalendarView {
 
         return self
     }
+
+    @discardableResult
+    func dayPresentation(_ state: CalendarViewState) -> CalendarView {
+        self.calendarDayListView.state(state)
+
+        return self
+    }
 }

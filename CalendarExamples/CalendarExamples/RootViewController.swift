@@ -21,10 +21,11 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = .white
 
         calendarView
-            .with(width: 350, height: 300)
+            .with(width: 350, height: 100)
             .center(to: view)
             .dayStyle(CalendarDayStyle())
             .weekHeaderStyle(DefaultStyle())
+            .dayPresentation(.collapsed)
 
             //.style(RectShapeStyle())
             //.state(.expanded)
