@@ -53,7 +53,7 @@ Step 1:
 Add following to your CartFile
 
 ```
-github "LenisDev/Calendar" ~> 0.0.1
+github "LenisDev/Calendar" ~> 0.0.2
 ```
 
 Step 2:
@@ -66,11 +66,11 @@ run `carthage update` from current project directory.
 #### CocoaPods
 
 Step 1:
-Add `pod 'CustomCalendar', '~> 0.0.1'` to your Podfile:
+Add `pod 'CustomCalendar', '~> 0.0.2'` to your Podfile:
 
 ```
 target 'MyApp' do
-  pod 'CustomCalendar', '~> 0.0.1'
+  pod 'CustomCalendar', '~> 0.0.2'
 end
 ```
 
@@ -94,7 +94,7 @@ run `pod install` from current project directory.
 #### Swift Package Manager
 ```
 dependencies: [
-    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/LenisDev/Calendar.git", .upToNextMajor(from: "0.0.2"))
 ]
 ```
 
