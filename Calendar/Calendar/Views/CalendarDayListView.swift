@@ -12,6 +12,8 @@ import UIKit
 /// Calendar presentation view
 public class CalendarDayListView: BaseView<CalendarDayListViewModel> {
 
+    public override var intrinsicContentSize: CGSize { CGSize(width: .zero, height: self.state == .expanded ? 300 : 50) }
+
     // MARK: - Properties
     /// `UICollectionViewFlowLayout` for `calendarCV` collectionview
     private(set) lazy var collectionViewLayout = UICollectionViewFlowLayout()
